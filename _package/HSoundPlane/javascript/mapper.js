@@ -63,11 +63,11 @@ function list()
 		// open the diagonal key
 		outlet(3, x_next, y_next);
 	} 
-	if(x_grad < THRESHOLD_X && ( x_next >= 0 || x_next < 30 )) {
+	if(x_grad < THRESHOLD_X && ( x_next > 0 || x_next < 29 )) {
 		// open the left / right key
 		outlet(3, x_next, y_int);
 	} 
-	if(y_grad < THRESHOLD_Y && ( y_next >= 0 || y_next < 5 )) {
+	if(y_grad < THRESHOLD_Y && ( y_next > 0 || y_next < 4 )) {
 //		post("key " + x_int +" -> next " + y_next + " | " + y_grad + "\n");
 		// open the upper / lower key
 		outlet(3, x_int, y_next);

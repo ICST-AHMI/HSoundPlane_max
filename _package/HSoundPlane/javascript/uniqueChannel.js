@@ -10,7 +10,7 @@ var channelIn = new Array(30);
 var channelMix = new Array(30);
 
 for(var i = 0; i < 30; i++){
-	channelIn[i] = -1;
+	channelIn[i] = 0;
 	channelMix[i] = 0.;
 }
 

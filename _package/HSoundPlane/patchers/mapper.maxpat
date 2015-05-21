@@ -1851,7 +1851,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 156.0, 344.0, 91.0, 22.0 ],
+					"patching_rect" : [ 156.0, 345.0, 91.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "mapper.js",
 						"parameter_enable" : 0
