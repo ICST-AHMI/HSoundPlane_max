@@ -1,4 +1,4 @@
-
+autowatch = 1;
 
 var myid=0;
 
@@ -11,6 +11,10 @@ setoutletassist(0,"number(int)");
 
 if (jsarguments.length>1)
 	myid = jsarguments[1];
+
+
+var THRESHOLD_X = 0.5;
+var THRESHOLD_Y = 0.9;
 
 var lastrouting = [-1, -1];
 var lastrouting_val = [0., 0.];
@@ -34,27 +38,39 @@ function list()
 	
 	var x = a[0] / 0.0333;
 	var y = (1. - a[1]) / 0.2;
+	var z = a[2];
 	
 	outlet(4, x, y, a[0], a[1], a[2], a[3]);
 	
-	var x_grad = 1. - Math.abs((x - parseInt(x)) - 0.5);
-	var y_grad = 1. - Math.abs((y - parseInt(y)) - 0.5);
+	// chops of the fractions
+	var x_int = parseInt(x);
+	var y_int = parseInt(y);
 	
-	var x_next = ((x - parseInt(x)) > 0.5)? parseInt(x) + 1: parseInt(x) -1;
-	var y_next = ((y - parseInt(y)) > 0.5)? parseInt(y) + 1: parseInt(y) -1;
+	// graduation with 1. in the center of the key and 0. at the border
+	var x_grad = 1. - Math.abs((x - x_int) - 0.5) * 2.0;
+	var y_grad = 1. - Math.abs((y - y_int) - 0.5) * 2.0;
+	
+	// calculates the next closest key in each direction
+	var x_next = ((x - x_int) > 0.5)? x_int + 1: x_int -1;
+	var y_next = ((y - y_int) > 0.5)? y_int + 1: y_int -1;
+
+//	post("v = " + y + " key " + y_int +" -> next " + y_next + " | " + y_grad + "\n");
 	
 	// open the main key
-	outlet(3, parseInt(x), parseInt(y));
+	outlet(3, x_int, y_int);
 
-	if(x_grad < 0.7 && y_grad < 0.7){
+	if(x_grad < THRESHOLD_X && y_grad < THRESHOLD_Y){
 		// open the diagonal key
 		outlet(3, x_next, y_next);
-	} if(x_grad < 0.7 && ( x_next >= 0 || x_next < 30 )) {
+	} 
+	if(x_grad < THRESHOLD_X && ( x_next >= 0 || x_next < 30 )) {
 		// open the left / right key
-		outlet(3, x_next, parseInt(y));
-	} if(y_grad < 0.7 && ( y_next >= 0 || y_next < 5 )) {
+		outlet(3, x_next, y_int);
+	} 
+	if(y_grad < THRESHOLD_Y && ( y_next >= 0 || y_next < 5 )) {
+//		post("key " + x_int +" -> next " + y_next + " | " + y_grad + "\n");
 		// open the upper / lower key
-		outlet(3, parseInt(x), y_next);
+		outlet(3, x_int, y_next);
 	}
 
 
@@ -62,27 +78,26 @@ function list()
 	thisrouting_val = [0., 0.];	
 	
 	// open the main channel
-	if(newRoutingCheck(parseInt(x))){
-		outlet(1, myid, parseInt(x), x_grad * 10.);
+	if(newRoutingCheck(x_int)){
+		outlet(1, myid, x_int, z);
 	} else {
-		outlet(0, myid, parseInt(x), x_grad * 10.);
+		outlet(0, myid, x_int, z);
 	}
-	thisrouting[0] = parseInt(x);
-	thisrouting_val[0] = x_grad * 10.;
-	if(x_grad < 0.7 && ( x_next >= 0 || x_next < 30 )) {
+	thisrouting[0] = x_int;
+	thisrouting_val[0] = x_grad;
+	if(x_grad < THRESHOLD_X && ( x_next >= 0 && x_next < 30 )) {
 		// open the left / right channel
 		if(newRoutingCheck(x_next)){
-			outlet(1, myid, x_next, (1. - x_grad) * 10.);
+			outlet(1, myid, x_next, z * .9);
 		} else {
-			outlet(0, myid, x_next, (1. - x_grad) * 10.);
+			outlet(0, myid, x_next, z *.9);
 		}
 		thisrouting[1] = x_next;
-		thisrouting_val[1] = (1. - x_grad) * 10.;
+		thisrouting_val[1] = (1. - x_grad);
 	}
 	routingCheck(0);
 	routingCheck(1);
 	
-//	post("received message " + x_grad + " | " + y_grad + "\n");
 }
 
 // checks if the last routings are still used. if not then those channels 
