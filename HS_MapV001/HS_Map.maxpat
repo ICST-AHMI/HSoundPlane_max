@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 296.0, 144.0, 1054.0, 582.0 ],
+		"rect" : [ 386.0, 143.0, 1133.0, 582.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -317,7 +317,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-22",
-					"items" : [ "fixedSine", ",", "dynamicSine", ",", "noise" ],
+					"items" : [ "fixedSine", ",", "dynamicSine", ",", "noise", ",", "audioMix", ",", "audioDynSin" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1349,7 +1349,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 89.0, 298.0, 1212.0, 631.0 ],
+						"rect" : [ 89.0, 298.0, 1395.0, 634.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1378,14 +1378,40 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-48",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 1247.708618, 266.0, 117.0, 22.0 ],
+									"style" : "",
+									"text" : "receive~ audioRight"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-33",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "signal" ],
+									"patching_rect" : [ 227.0, 261.0, 109.0, 22.0 ],
+									"style" : "",
+									"text" : "receive~ audioLeft"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-45",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 1280.833618, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 1280.833618, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1396,9 +1422,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 1168.777954, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 1168.777954, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1409,9 +1435,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 1056.722412, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 1056.722412, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1422,9 +1448,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 944.66687, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 944.66687, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1435,9 +1461,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 832.611267, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 832.611267, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1448,9 +1474,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 720.555664, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 720.555664, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1461,9 +1487,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 608.500122, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 608.500122, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1474,9 +1500,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 496.444519, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 496.444519, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1487,9 +1513,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 395.888947, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 395.888947, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1500,9 +1526,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 295.833405, 124.0, 91.0, 22.0 ],
+									"patching_rect" : [ 295.833405, 124.0, 76.0, 22.0 ],
 									"style" : "",
-									"text" : "bp10~ 40. 500."
+									"text" : "piezo_filter~"
 								}
 
 							}
@@ -1997,6 +2023,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-33", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-35", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2110,6 +2145,15 @@
 									"hidden" : 0,
 									"midpoints" : [ 215.6875, 122.5, 215.6875, 122.5 ],
 									"source" : [ "obj-46", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 31 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-48", 0 ]
 								}
 
 							}
@@ -2409,6 +2453,17 @@
 									"source" : [ "obj-9", 0 ]
 								}
 
+							}
+ ],
+						"styles" : [ 							{
+								"name" : "STYLE1",
+								"parentstyle" : "",
+								"multi" : 0
+							}
+, 							{
+								"name" : "jpatcher001",
+								"parentstyle" : "",
+								"multi" : 0
 							}
  ]
 					}
@@ -3015,7 +3070,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "piezo_filter~.maxpat",
+				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "bp10~.maxpat",
+				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "lowboost~.maxpat",
 				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
 				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
 				"type" : "JSON",

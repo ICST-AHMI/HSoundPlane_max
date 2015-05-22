@@ -29,6 +29,9 @@ function fingerlost(v){
  		thisrouting_val = [0., 0.];	
 		routingCheck(0);
 		routingCheck(1);
+		outlet(4, "finger", 0);
+	} else {
+		outlet(4, "finger", 1);
 	}
 }
 
@@ -40,7 +43,7 @@ function list()
 	var y = (1. - a[1]) / 0.2;
 	var z = a[2];
 	
-	outlet(4, x, y, a[0], a[1], a[2], a[3]);
+	outlet(4, "data", x, y, a[0], a[1], a[2], a[3]);
 	
 	// chops of the fractions
 	var x_int = parseInt(x);
