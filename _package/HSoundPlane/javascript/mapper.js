@@ -24,7 +24,7 @@ var thisrouting_val = [0., 0.];
 
 function fingerlost(v){
 	if(v == 1){
-		post("lost finger number: "+myid+"\n");
+//		post("lost finger number: "+myid+"\n");
 		thisrouting = [-1, -1];
  		thisrouting_val = [0., 0.];	
 		routingCheck(0);
