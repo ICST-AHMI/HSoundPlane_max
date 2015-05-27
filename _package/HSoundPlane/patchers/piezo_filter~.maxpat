@@ -104,6 +104,7 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
@@ -113,7 +114,7 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 55.0, 148.0, 91.0, 22.0 ],
 					"style" : "",
-					"text" : "bp10~ 40. 400."
+					"text" : "bp10~ 40. 200."
 				}
 
 			}
