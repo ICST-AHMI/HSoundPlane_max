@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 2,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 178.0, 107.0, 1043.0, 573.0 ],
+		"rect" : [ 120.0, 79.0, 840.0, 573.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,30 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 498.0, 122.200012, 91.0, 22.0 ],
+					"style" : "",
+					"text" : "print nextframe"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 797.0, 91.200012, 79.0, 22.0 ],
+					"style" : "",
+					"text" : "print sending"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-74",
 					"maxclass" : "newobj",
@@ -185,7 +209,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -618,7 +642,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1060,12 +1084,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 84.0, 128.0, 1327.0, 351.0 ],
+						"rect" : [ 79.0, 128.0, 1327.0, 351.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1093,6 +1117,30 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 26.5, 174.5, 24.0, 24.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 26.5, 217.5, 77.0, 22.0 ],
+									"style" : "",
+									"text" : "s framebang"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 0,
 									"fontname" : "Arial",
@@ -1492,6 +1540,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-22", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1708,6 +1765,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-30", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-36", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1871,12 +1937,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 2,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 89.0, 298.0, 1138.0, 634.0 ],
+						"rect" : [ 34.0, 79.0, 1403.0, 639.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1903,6 +1969,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -2127,7 +2194,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 2,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -3389,6 +3456,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-48", 4 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3399,6 +3475,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-25", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-30", 0 ]
@@ -3629,57 +3714,57 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "uniqueChannel.js",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/javascript",
-				"patcherrelativepath" : "../_package/HSoundPlane/javascript",
+				"bootpath" : "~/_maxstuff/HSoundPlane/javascript",
+				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "piezo_filter~.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bp10~.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lowboost~.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "voice_fixedSine.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/HS_MapV001",
+				"bootpath" : "~/_ICSTdocs/4-code/max/HSoundplane/HS_MapV001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.js",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/javascript",
-				"patcherrelativepath" : "../_package/HSoundPlane/javascript",
+				"bootpath" : "~/_maxstuff/HSoundPlane/javascript",
+				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
