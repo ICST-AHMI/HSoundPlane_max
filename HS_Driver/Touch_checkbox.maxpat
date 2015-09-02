@@ -122,7 +122,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1215.0, -74.0, 38.0, 22.0 ],
 					"style" : "",
-					"text" : "col5"
+					"text" : "col6"
 				}
 
 			}
@@ -148,7 +148,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1063.0, -74.0, 38.0, 22.0 ],
 					"style" : "",
-					"text" : "col4"
+					"text" : "col5"
 				}
 
 			}
@@ -174,7 +174,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 911.0, -74.0, 38.0, 22.0 ],
 					"style" : "",
-					"text" : "col3"
+					"text" : "col4"
 				}
 
 			}
@@ -200,7 +200,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 759.0, -74.0, 38.0, 22.0 ],
 					"style" : "",
-					"text" : "col2"
+					"text" : "col3"
 				}
 
 			}
@@ -226,7 +226,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 607.0, -74.0, 38.0, 22.0 ],
 					"style" : "",
-					"text" : "col1"
+					"text" : "col2"
 				}
 
 			}
@@ -252,7 +252,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 455.0, -74.0, 38.0, 22.0 ],
 					"style" : "",
-					"text" : "col0"
+					"text" : "col1"
 				}
 
 			}
@@ -278,7 +278,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 303.0, -74.0, 45.0, 22.0 ],
 					"style" : "",
-					"text" : "col-1"
+					"text" : "col0"
 				}
 
 			}
@@ -1430,9 +1430,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.999878, 417.0, 47.0, 22.0 ],
+					"patching_rect" : [ 6.999878, 417.0, 46.0, 22.0 ],
 					"style" : "",
-					"text" : "255 #1"
+					"text" : "110 #1"
 				}
 
 			}
@@ -1467,7 +1467,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1.999969, -0.000001, 29.5, 22.0 ],
 					"style" : "",
-					"text" : "-1",
+					"text" : "0",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
 					"textjustification" : 1
 				}
@@ -1492,7 +1492,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 33.499939, -0.000004, 29.5, 22.0 ],
 					"style" : "",
-					"text" : "0",
+					"text" : "1",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
 					"textjustification" : 1
 				}
@@ -1517,7 +1517,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 64.999939, -0.000004, 29.5, 22.0 ],
 					"style" : "",
-					"text" : "1",
+					"text" : "2",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
 					"textjustification" : 1
 				}
@@ -1542,7 +1542,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 96.499939, -0.000001, 29.5, 22.0 ],
 					"style" : "",
-					"text" : "2",
+					"text" : "3",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
 					"textjustification" : 1
 				}
@@ -1567,7 +1567,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 127.999969, 0.000003, 29.5, 22.0 ],
 					"style" : "",
-					"text" : "3",
+					"text" : "4",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
 					"textjustification" : 1
 				}
@@ -1592,7 +1592,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 159.499969, 0.0, 29.5, 22.0 ],
 					"style" : "",
-					"text" : "4",
+					"text" : "5",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
 					"textjustification" : 1
 				}
@@ -1617,7 +1617,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 190.999969, -0.000003, 29.5, 22.0 ],
 					"style" : "",
-					"text" : "5",
+					"text" : "6",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 0.9 ],
 					"textjustification" : 1
 				}
@@ -4261,7 +4261,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "HSpad.maxpat",
-				"bootpath" : "~/Arbeiten/AHMI/code/soundplane/max/HSoundplane_driver",
+				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/HS_Driver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
