@@ -10,6 +10,7 @@
 		}
 ,
 		"rect" : [ 120.0, 79.0, 840.0, 573.0 ],
+		"rect" : [ 178.0, 107.0, 932.0, 573.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -126,7 +127,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 65.224945, 21.700012, 140.0, 25.0 ],
+					"patching_rect" : [ 65.224945, 22.700012, 140.0, 25.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 65.224945, 21.700012, 140.0, 25.0 ],
 					"style" : "",
